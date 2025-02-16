@@ -46,6 +46,11 @@ public partial class StateMachine : Node {
 
     // public override void _Ready() => EnterInitialState();
 
+    public override void _ExitTree() {
+        this.CurrentState?.Exit();
+        this.CurrentState = null;
+    }
+
     public override void _Process(double delta) => this.CurrentState?.Process(delta);
 
     public override void _PhysicsProcess(double delta) => this.CurrentState?.PhysicsProcess(delta);
