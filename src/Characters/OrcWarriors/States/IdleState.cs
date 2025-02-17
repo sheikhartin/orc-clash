@@ -33,6 +33,8 @@ public partial class IdleState : BaseState {
             || @event.IsActionPressed("move_right")
         ) {
             base.ChangeState("Walk");
+        } else if (@event.IsActionPressed("attack")) {
+            base.ChangeState("Attack");
         }
     }
 }

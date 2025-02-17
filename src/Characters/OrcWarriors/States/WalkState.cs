@@ -28,6 +28,8 @@ public partial class WalkState : BaseState {
             || @event.IsActionPressed("fast_move_right")
         ) {
             base.ChangeState("Run");
+        } else if (@event.IsActionPressed("attack")) {
+            base.ChangeState("Attack");
         }
     }
 }
