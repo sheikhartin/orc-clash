@@ -34,6 +34,11 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Orc Clash"
 
+[global_group]
+
+enemies=""
+players=""
+
 [input]
 
 move_left={
