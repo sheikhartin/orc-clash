@@ -2,8 +2,8 @@ using Godot;
 
 namespace OrcClash.Characters.OrcWarriors.States;
 
-public partial class WalkState : BaseState {
-    public WalkState(BaseCharacter character) : base(character) { }
+public partial class WalkState : BaseState<BaseOrcBehavior> {
+    public WalkState(BaseOrcBehavior character) : base(character) { }
 
     public override void Enter() => base.Character.SetDirectionalAnimation("walk");
 

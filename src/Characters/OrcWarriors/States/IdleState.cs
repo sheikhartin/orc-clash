@@ -2,8 +2,8 @@ using Godot;
 
 namespace OrcClash.Characters.OrcWarriors.States;
 
-public partial class IdleState : BaseState {
-    public IdleState(BaseCharacter character) : base(character) { }
+public partial class IdleState : BaseState<BaseOrcBehavior> {
+    public IdleState(BaseOrcBehavior character) : base(character) { }
 
     public override void Enter() {
         base.Character.Velocity = new Vector2(0, base.Character.Velocity.Y);

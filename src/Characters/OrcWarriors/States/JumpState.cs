@@ -2,10 +2,10 @@ using Godot;
 
 namespace OrcClash.Characters.OrcWarriors.States;
 
-public partial class JumpState : BaseState {
+public partial class JumpState : BaseState<BaseOrcBehavior> {
     private bool _hasDoubleJumped;
 
-    public JumpState(BaseCharacter character) : base(character) { }
+    public JumpState(BaseOrcBehavior character) : base(character) { }
 
     private void PerformJump() {
         base.Character.Velocity = new Vector2(base.Character.Velocity.X, base.Character.JumpVelocity);
