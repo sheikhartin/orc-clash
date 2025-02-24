@@ -10,7 +10,8 @@ public partial class Deadzone : Area2D {
     private void OnBodyEntered(Node2D body) {
         if (body is BaseCharacter character) {
             character.TakeDamage(character.MaxHealth);
-            character.QueueFree();
+            if (body.IsInGroup("enemies")) character.QueueFree();
+            else GetTree().Paused = true;
         }
     }
 }
