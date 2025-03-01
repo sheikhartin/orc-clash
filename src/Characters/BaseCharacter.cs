@@ -75,6 +75,11 @@ public partial class BaseCharacter : CharacterBody2D {
         else this.StateMachine.ChangeState("Hurt");
     }
 
+    public void Heal(int amount) {
+        if (amount <= 0) return;
+        this.CurrentHealth = Mathf.Min(this.CurrentHealth + amount, this.MaxHealth);
+    }
+
     protected virtual void InitializeStates() { }
 
     public void SetDirectionalAnimation(string motionType, bool forceReply = false) {
