@@ -2,7 +2,7 @@ using Godot;
 
 using OrcClash.Characters;
 
-namespace OrcClash.Core;
+namespace OrcClash.Environment;
 
 public partial class Deadzone : Area2D {
     public override void _Ready() => base.BodyEntered += OnBodyEntered;
