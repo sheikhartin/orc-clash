@@ -1,9 +1,10 @@
-[gd_scene load_steps=93 format=3 uid="uid://cdcu3o0w1j1bk"]
+[gd_scene load_steps=94 format=3 uid="uid://cdcu3o0w1j1bk"]
 
 [ext_resource type="Texture2D" uid="uid://bjb6j8op8uyeo" path="res://assets/graphics/2d-orc-asset-packs/swamp-slasher/idle-001.png" id="1_3u2ao"]
 [ext_resource type="Texture2D" uid="uid://dn7prx56el50e" path="res://assets/graphics/2d-orc-asset-packs/swamp-slasher/idle-000.png" id="1_5s7wr"]
 [ext_resource type="Script" path="res://src/Core/StateMachine.cs" id="1_kvban"]
 [ext_resource type="Script" path="res://src/Characters/OrcWarriors/BaseOrcBehavior.cs" id="1_y5ol3"]
+[ext_resource type="PackedScene" uid="uid://bme287oos011y" path="res://scenes/user_interfaces/game_pause_controller.tscn" id="2_e36tn"]
 [ext_resource type="Texture2D" uid="uid://us1o6noiclc" path="res://assets/graphics/2d-orc-asset-packs/swamp-slasher/attack-001.png" id="2_jgjh4"]
 [ext_resource type="Texture2D" uid="uid://dj52lys527w2l" path="res://assets/graphics/2d-orc-asset-packs/swamp-slasher/walk-009.png" id="2_o5vjd"]
 [ext_resource type="Texture2D" uid="uid://c2dbe1jjiviy6" path="res://assets/graphics/2d-orc-asset-packs/swamp-slasher/idle-002.png" id="2_pyopg"]
@@ -1964,6 +1965,7 @@ limit_right = 50000
 limit_bottom = 5000
 limit_smoothed = true
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 editor_draw_limits = true
 script = ExtResource("3_m0vie")
 
@@ -2046,3 +2048,10 @@ text = "State: -
 Animation: -"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GamePauseController" parent="." instance=ExtResource("2_e36tn")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
