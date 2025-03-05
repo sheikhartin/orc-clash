@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2qn8cs2uygwt"]
+
+[ext_resource type="Script" path="res://src/Environment/collectible_key.gd" id="1_gm2ui"]
+[ext_resource type="Texture2D" uid="uid://cdp51xx7hoxhs" path="res://assets/graphics/medieval-ruins-cartoon-2d-tilekit/collectable-object/key-02.png" id="2_4tdnn"]
+[ext_resource type="AudioStream" uid="uid://tbxp6wdqgy63" path="res://assets/audio/sfx/key-rattle.mp3" id="3_8ark7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afbxd"]
+size = Vector2(64, 26)
+
+[node name="CollectibleKey" type="Area2D"]
+script = ExtResource("1_gm2ui")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_4tdnn")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_afbxd")
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8ark7")
+volume_db = 10.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
