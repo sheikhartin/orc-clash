@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://kslhv1f5lhaw"]
+
+[ext_resource type="Script" path="res://src/Environment/EnergyBooster.cs" id="1_28xbt"]
+[ext_resource type="Texture2D" uid="uid://05gxdb45cobl" path="res://assets/graphics/market-cartoon-2d-tilekit/environment/decor-potions-01.png" id="2_dx6kj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6c74"]
+size = Vector2(50, 44)
+
+[node name="EnergyDrinks" type="Area2D"]
+script = ExtResource("1_28xbt")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_dx6kj")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_p6c74")

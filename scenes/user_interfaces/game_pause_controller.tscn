@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://bme287oos011y"]
+
+[ext_resource type="Script" path="res://src/SceneControls/game_pause_controller.gd" id="1_au6mo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xuhqx"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.225186, 0.289068, 0.124605, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 5
+
+[node name="GamePauseController" type="Control"]
+process_mode = 3
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_au6mo")
+
+[node name="PauseMenuLayout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HeaderLabel" type="Label" parent="PauseMenuLayout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxFlat_xuhqx")
+text = "Paused 🞂"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="PauseMenuLayout"]
+layout_mode = 2
+text = "Continue 🢩"
+
+[node name="BackToMenuButton" type="Button" parent="PauseMenuLayout"]
+layout_mode = 2
+text = "🢨 Back to menu"
+
+[connection signal="pressed" from="PauseMenuLayout/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="PauseMenuLayout/BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
