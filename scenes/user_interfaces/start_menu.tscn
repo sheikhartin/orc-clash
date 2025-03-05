@@ -1,0 +1,198 @@
+[gd_scene load_steps=5 format=3 uid="uid://chxeknp42ihip"]
+
+[ext_resource type="Script" path="res://src/SceneControls/start_menu.gd" id="1_jdow4"]
+[ext_resource type="Texture2D" uid="uid://c6h112wpixtfh" path="res://assets/graphics/main-menu-background.png" id="1_y7mvi"]
+[ext_resource type="AudioStream" uid="uid://br188ubes6glg" path="res://assets/audio/music/heroism.mp3" id="1_ypdiw"]
+[ext_resource type="Theme" uid="uid://go6s6pkqjb2r" path="res://assets/default_theme.tres" id="3_xlb6u"]
+
+[node name="StartMenu" type="CanvasLayer"]
+script = ExtResource("1_jdow4")
+
+[node name="MenuBackdrop" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("1_y7mvi")
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_ypdiw")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="StartScreenLayout" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.5
+offset_right = 171.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="HeaderLabel" type="Label" parent="StartScreenLayout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_xlb6u")
+theme_override_font_sizes/font_size = 155
+text = "Orc Clash"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="GameLevelSelectionButton" type="Button" parent="StartScreenLayout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 65
+text = "Levels"
+
+[node name="GameSettingsButton" type="Button" parent="StartScreenLayout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 65
+text = "Game Settings"
+
+[node name="ExitButton" type="Button" parent="StartScreenLayout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 65
+text = "Exit"
+
+[node name="GameLevelSelectionLayout" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HeaderLabel" type="Label" parent="GameLevelSelectionLayout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_xlb6u")
+theme_override_font_sizes/font_size = 90
+text = "Levels"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="GridContainer" type="GridContainer" parent="GameLevelSelectionLayout"]
+layout_mode = 2
+columns = 3
+
+[node name="LevelButton01" type="Button" parent="GameLevelSelectionLayout/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+text = "Level 1"
+
+[node name="LevelButton02" type="Button" parent="GameLevelSelectionLayout/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Level 2"
+
+[node name="LevelButton03" type="Button" parent="GameLevelSelectionLayout/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Level 3"
+
+[node name="LevelButton04" type="Button" parent="GameLevelSelectionLayout/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Level 4"
+
+[node name="LevelButton05" type="Button" parent="GameLevelSelectionLayout/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Level 5"
+
+[node name="LevelButton06" type="Button" parent="GameLevelSelectionLayout/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Level 6"
+
+[node name="GameSettingsLayout" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HeaderLabel" type="Label" parent="GameSettingsLayout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_xlb6u")
+theme_override_font_sizes/font_size = 90
+text = "Game Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MusicVolumeLabel" type="Label" parent="GameSettingsLayout"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeSlider" type="HSlider" parent="GameSettingsLayout"]
+unique_name_in_owner = true
+layout_mode = 2
+value = 70.0
+rounded = true
+
+[node name="SFXVolumeLabel" type="Label" parent="GameSettingsLayout"]
+layout_mode = 2
+text = "SFX Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXVolumeSlider" type="HSlider" parent="GameSettingsLayout"]
+unique_name_in_owner = true
+layout_mode = 2
+value = 70.0
+rounded = true
+
+[node name="MainMenuReturnButton" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+offset_right = 137.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 55
+text = "< Back"
+
+[connection signal="pressed" from="StartScreenLayout/GameLevelSelectionButton" to="." method="_on_game_level_selection_button_pressed"]
+[connection signal="pressed" from="StartScreenLayout/GameSettingsButton" to="." method="_on_game_settings_button_pressed"]
+[connection signal="pressed" from="StartScreenLayout/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="GameLevelSelectionLayout/GridContainer/LevelButton01" to="." method="_on_level_button_01_pressed"]
+[connection signal="value_changed" from="GameSettingsLayout/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="GameSettingsLayout/SFXVolumeSlider" to="." method="_on_sfx_volume_slider_value_changed"]
+[connection signal="pressed" from="MainMenuReturnButton" to="." method="_on_main_menu_return_button_pressed"]
