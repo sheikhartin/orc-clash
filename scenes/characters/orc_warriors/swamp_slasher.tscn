@@ -1951,7 +1951,6 @@ _data = {
 position = Vector2(239, 430)
 script = ExtResource("1_y5ol3")
 AnimationPrefix = "swamp_slasher/"
-DebugMode = true
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)

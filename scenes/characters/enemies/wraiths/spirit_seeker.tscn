@@ -1725,7 +1725,6 @@ JumpVelocity = 0.0
 AllowDoubleJump = false
 AttackDamage = 15
 AnimationPrefix = "spirit_seeker/"
-DebugMode = true
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.32381, 0.32381)
