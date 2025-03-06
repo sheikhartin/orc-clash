@@ -10,12 +10,12 @@ I created the Orc Clash game to learn more about making video games! I hope you 
 ### Screenshots
 
 <div align="center">
-  <img src="https://gist.github.com/user-attachments/assets/690a08f9-c1a1-469c-b87f-ddf96371fda7" alt="Start menu">
-  <img src="https://gist.github.com/user-attachments/assets/bd6a1f97-f17c-4b3e-9760-885726378de9" alt="Game options you can change">
-  <img src="https://gist.github.com/user-attachments/assets/3ae780d0-526c-4b76-92f7-63f8e5083f78" alt="Level selection menu">
-  <img src="https://gist.github.com/user-attachments/assets/cb4bb51e-de11-488a-8bdb-b64f6ef23a4d" alt="battling a ghost-like enemy">
-  <img src="https://gist.github.com/user-attachments/assets/fc761f58-e796-4be1-b0ed-76229e8ff625" alt="Pause menu">
-  <img src="https://gist.github.com/user-attachments/assets/16bedb09-ecd6-4cdd-9fe0-31716dfdd6d5" alt="Collect all the keys to finish the level">
+  <img src="https://github.com/user-attachments/assets/0b40d37b-790b-4bce-9b26-4b16c787b043" alt="Start menu">
+  <img src="https://github.com/user-attachments/assets/11510d98-543b-48f1-8012-365053b34591" alt="Game options you can change">
+  <img src="https://github.com/user-attachments/assets/439c139a-5ff7-4e6f-8693-867b83ac0121" alt="Level selection menu">
+  <img src="https://github.com/user-attachments/assets/74a06d5a-4a93-490c-8bc7-5a3c7a615826" alt="battling a ghost-like enemy">
+  <img src="https://github.com/user-attachments/assets/a57f0196-bf0c-42f3-a30c-41e4d8501e30" alt="Pause menu">
+  <img src="https://github.com/user-attachments/assets/e2783e63-1385-4d3d-88ce-f69598234a19" alt="Collect all the keys to finish the level">
 </div>
 
 ### License
